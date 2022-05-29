@@ -18,7 +18,6 @@ jobs:
       - name: Install Yarn
         run: npm install -g yarn
       - name: Building Server
-        working-directory: server
         run: yarn install && yarn build
       - name: Deploy server to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
