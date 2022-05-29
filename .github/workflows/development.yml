@@ -23,6 +23,6 @@ jobs:
         with:
           args: deploy --dir=build --dev
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: 'todo-test-build-dev'
+          heroku_app_name: 'todo-test-build-server'
           heroku_email: 'eduarte2205@gmail.com'
 
