@@ -28,25 +28,4 @@ jobs:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: 'todo-test-build-dev'
           heroku_email: 'eduarte2205@gmail.com'
-  deploy_client:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Development Code
-        uses: actions/checkout@v2
-      - name: Use Node.js 17.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 17.x
-     - name: Building Client
-        run: npm install
-        working-directory: client
-      - run: npm run build --if-present
-        working-directory: client
-      - name: Deploy to Heroku
-        uses: akhileshns/heroku-deploy@v3.12.12
-        working-directory: client
-        with:
-          args: deploy --dir=build --dev
-          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: 'todo-test-build-dev'
-          heroku_email: 'eduarte2205@gmail.com'
+
