@@ -15,9 +15,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 17.x
+      - name: Install Yarn
+        run: npm install -g yarn
       - name: Building Server
         working-directory: server
-        run: npm install && npm run build --if-present
+        run: yarn install && yarn build
       - name: Deploy server to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
