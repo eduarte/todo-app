@@ -20,7 +20,7 @@ jobs:
       - run: npm run build --if-present
         working-directory: server
       - run: npm install
-        working-directory: clinet
+        working-directory: client
       - run: npm run build --if-present
         working-directory: client    
       - name: Deploy to Heroku
